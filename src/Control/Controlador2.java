@@ -28,6 +28,7 @@ public class Controlador2 {
     this.vista=new Escena2();
 
     this.vista.getTwo().setOnAction(new Evento());
+    this.vista.getThree().setOnAction(new Evento1());
     }
 
     public Escena2 getVista() {
@@ -62,6 +63,24 @@ public class Controlador2 {
         }
         
     }
-     
+private class Evento1 implements EventHandler<ActionEvent>{
+
+        @Override
+        public void handle(ActionEvent t) {
+           
+ 
+         Singleton singleton= Singleton.getSingleton();
+         Stage stage= singleton.getStage();
+  Controlador1 controlador = new 
+               Controlador1();
+         Escena1 escena =
+         controlador.getEscena();
+
+           stage.setScene( escena.getScene());
+           stage.show();
+
+        }
+        
+    }     
      
 }

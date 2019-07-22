@@ -79,9 +79,17 @@ public Escena3(Controlador3 c, int p1, int p2) {
    
  Boost m= new Boost(200,200);
     Boost w= new Boost(400,400);
+    Boost e= new Boost(730-200,580-200);
+    Boost t=new Boost(730-400,200);
+    Boost h= new Boost(730-50,50);
+    Boost killi= new Boost(50,520);
   this.poder= new ArrayList<>();
     this.poder.add(m);
     this.poder.add(w);
+    this.poder.add(e);
+    this.poder.add(t);
+    this.poder.add(h);
+    this.poder.add(killi);
     this.lapiz=tablero.getGraphicsContext2D(); 
     lapiz.setFill(Color.ORANGE);
     this.tanque= new Tanque(50,50);
@@ -796,10 +804,10 @@ if(this.p2==4){
                         Shape interC1= SVGPath.intersect(c, s1);
                         Shape interC2= SVGPath.intersect(c, s2);
                      if(interC1.getLayoutBounds().getWidth()!= -1)  {
-                         tanque.setSalud(tanque.getSalud()-0.2);
+                         tanque.setSalud(tanque.getSalud()-0.5);
                      }     
                      if(interC2.getLayoutBounds().getWidth()!= -1)  {
-                         tanque2.setSalud(tanque2.getSalud()-0.2);
+                         tanque2.setSalud(tanque2.getSalud()-0.5);
                      }
                      
                     }

@@ -91,15 +91,22 @@ public Escena4(Controlador4 c, int p1, int p2) {
     this.escena=new Scene(panel,755,580);
 
  Boost m= new Boost(200,200);
-    Boost w= new Boost(400,400);
+    Boost w= new Boost(400,100);
+ Boost e= new Boost(50,50);
+ Boost t= new Boost(50,350);
+ Boost killita= new Boost(400,300);
+ 
   this.poder= new ArrayList<>();
     this.poder.add(m);
     this.poder.add(w);
+    this.poder.add(e);
+    this.poder.add(t);
+    this.poder.add(killita);
     this.lapiz=tablero.getGraphicsContext2D(); 
     lapiz.setFill(Color.ORANGE);
-    this.tanque= new Tanque(50,50);
+    this.tanque= new Tanque(400,450);
     this.anim= new Image("Imagenes/na.png");
- this.tanque2= new Tanque(650,430);
+ this.tanque2= new Tanque(650,130);
  this.anim2= new Image("Imagenes/va.png");
     pulsacionteclado= new ArrayList<>();
 
@@ -809,10 +816,10 @@ if(this.p2==4){
                         Shape interC1= SVGPath.intersect(c, s1);
                         Shape interC2= SVGPath.intersect(c, s2);
                      if(interC1.getLayoutBounds().getWidth()!= -1)  {
-                         tanque.setSalud(tanque.getSalud()-0.2);
+                         tanque.setSalud(tanque.getSalud()-0.5);
                      }     
                      if(interC2.getLayoutBounds().getWidth()!= -1)  {
-                         tanque2.setSalud(tanque2.getSalud()-0.2);
+                         tanque2.setSalud(tanque2.getSalud()-0.5);
                      }
                      
                     }

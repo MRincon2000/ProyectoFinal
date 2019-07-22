@@ -39,12 +39,12 @@ public class Escena2 implements Vista{
     this.fondo=new Image("imagenes/fondo.jpg");
     this.fondo1=new Image("imagenes/tank_002.png");
     this.two= new Button("Dos jugadores");
-    this.three= new Button("Tres jugadores");
+    this.three= new Button("Atras");
     
     AnchorPane.setBottomAnchor(two, 130.00);
     AnchorPane.setLeftAnchor(two, 300.00);
-    AnchorPane.setBottomAnchor(three, 30.00);
-    AnchorPane.setLeftAnchor(three, 290.00);
+    AnchorPane.setBottomAnchor(three, 70.00);
+    AnchorPane.setLeftAnchor(three, 400.00);
         Canvas tablero=new Canvas(1000,1000);
         this.lapiz= tablero.getGraphicsContext2D();
          lapiz.drawImage(fondo, 0, 0);
@@ -110,6 +110,10 @@ public class Escena2 implements Vista{
 
     public void setTwo(Button two) {
         this.two = two;
+    }
+
+    public Button getThree() {
+        return three;
     }
     
 }
